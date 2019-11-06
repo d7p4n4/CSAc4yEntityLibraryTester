@@ -13,12 +13,24 @@ namespace CSAc4yEntityLibraryTester
     {
         static void Main(string[] args)
         {
-            Ac4yIdentificationBaseEntityMethods ac4YIdentificationBaseEntityMethods = new Ac4yIdentificationBaseEntityMethods("Ac4yDb2");
+            //Ac4yIdentificationBaseEntityMethods ac4YIdentificationBaseEntityMethods = new Ac4yIdentificationBaseEntityMethods("Ac4yDb2");
             Ac4yEntityMethods ac4YEntityMethods = new Ac4yEntityMethods("Ac4yDb2");
             Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
-            Ac4y ac4Y = new Ac4y();
-
-            ac4YIdentificationBase.CreatedAt = DateTime.Now;
+            Ac4y ac4Y = new Ac4y()
+            {
+                
+                Ac4yIdentification = new Ac4yIdentification()
+                {
+                    HumanId = "test"
+                    ,
+                    CreatedAt = DateTime.Now
+                    ,
+                    template = new Ac4yIdentificationBase()
+                    {
+                        CreatedAt = DateTime.Now
+                    }
+                }
+            };
 
             ac4YEntityMethods.addNew(ac4Y);
 
