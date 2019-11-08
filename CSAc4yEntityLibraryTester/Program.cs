@@ -15,29 +15,22 @@ namespace CSAc4yEntityLibraryTester
         {
             //Ac4yIdentificationBaseEntityMethods ac4YIdentificationBaseEntityMethods = new Ac4yIdentificationBaseEntityMethods("Ac4yDb2");
             Ac4yEntityMethods ac4YEntityMethods = new Ac4yEntityMethods("Ac4yDb2");
-            Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
+
             Ac4y ac4Y = new Ac4y()
             {
-                
-                Ac4yIdentification = new Ac4yIdentification()
+                HumanId = "ac4yobject",
+                serialization = "<?xml version='1.0' encoding=\"UTF - 8\"?>< Ac4yClass xmlns:xsd = \"http://www.w3.org/2001/XMLSchema\" xmlns: xsi = \"http://www.w3.org/2001/XMLSchema-instance\" >< Name > Ac4y </ Name >< Ancestor > Ac4yIdentification </ Ancestor >< Namespace > CSAc4y.Class </ Namespace >< GUID />< PropertyList >< Ac4yProperty >< Name > serialization </ Name >< Type > String </ Type ></ Ac4yProperty >< Ac4yProperty >< Name > template </ Name >< Type > Ac4yIdentificationBase </ Type ></ Ac4yProperty >< Ac4yProperty >< Name > GUID </ Name >< Type > String </ Type ></ Ac4yProperty >< Ac4yProperty >< Name > HumanId </ Name >< Type > String </ Type ></ Ac4yProperty >< Ac4yProperty >< Name > PublicHumanId </ Name >< Type > String </ Type ></ Ac4yProperty >< Ac4yProperty >< Name > id </ Name >< Type > Int32 </ Type ></ Ac4yProperty ></ PropertyList ></ Ac4yClass > ",
+                template = new Ac4yIdentificationBase()
                 {
-                    HumanId = "test"
-                    ,
-                    CreatedAt = DateTime.Now
-                    ,
-                    template = new Ac4yIdentificationBase()
-                    {
-                        CreatedAt = DateTime.Now
-                    }
+                    HumanId = "ac4ytemplate",
                 }
             };
 
             ac4YEntityMethods.addNew(ac4Y);
 
-            //ac4YIdentificationBaseEntityMethods.addNew(ac4YIdentificationBase);
 
-            //Ac4yIdentificationBase uj = ac4YIdentificationBaseEntityMethods.findFirstById(1);
-            //Console.WriteLine(uj.CreatedAt);
+            Ac4y uj = ac4YEntityMethods.findFirstById(1);
+            Console.WriteLine(uj.GUID);
         }
     }
 }
