@@ -58,6 +58,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Library\c#\CSAc4yLib.dll</HintPath>
     </Reference>
+    <Reference Include="CSAc4yMetaClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Library\c#\CSAc4yMetaClassLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="CSAc4yPersistentLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Library\c#\CSAc4yPersistentLib.dll</HintPath>
